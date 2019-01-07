@@ -2,8 +2,19 @@
 	based on a given key */
 
 
-const convert = () => {
+const convert = (input, keyValue) => {
 	// Write your code here
+	let objVal = null;
+	if (Array.isArray(input)) {
+
+	}
+	if (input.length > 0 && keyValue) {
+		objVal = {};
+		for (arrValue of input) {
+			objVal[arrValue[keyValue]] = arrValue;
+		}
+	}
+	return objVal;
 };
 
 /* For example,

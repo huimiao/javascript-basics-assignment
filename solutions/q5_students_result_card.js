@@ -8,3 +8,23 @@
 
 
 // Write your code here
+var studentDetails = [
+    {
+        name:'Pradeep',
+        subjects:[{"id":"Grammers","marks":62},{"id":"Accounts","marks":87},]
+    },
+    {
+        name:'Sai',
+        subjects:[{"id":"Grammers","marks":42},{"id":"Physics","marks":67},]
+    }
+];
+var percentage=0;
+var marks='';
+function calculatePercentage(studentDetails){
+    for(var students of studentDetails){
+        students.subjects.forEach(function(item){percentage+=item['marks']});
+        percentage=percentage/students.subjects.length;
+        marks+=JSON.stringify({"name":students.name,"percentage":students.percentage});
+    }
+    return marks;
+}
